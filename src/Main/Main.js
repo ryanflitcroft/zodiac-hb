@@ -4,17 +4,21 @@ import ZodiacCard from '../ZodiacCard/ZodiacCard'
 import './Main.css'
 
 export default function Main(props) {
-
   return (
+    
     <main style={{ backgroundImage: `url(${backgroundImg})` }}>
-
+      {console.log(props)}
       
       {/* import the ZodiacCard component */}
       {/* get the zodiac array from props */}
       {/* for each item in the `zodiacs` array props, render a ZodiacCard component, passing in the name and the dates as props to the ZodiacCard component */}
       {/* remember that when you map over an array and render out a list, each item in the list needs a unique 'key' prop */}
-      {props.zodiacs.map((zodiac, i) => 
-        <ZodiacCard key={zodiac.name + i} name={zodiac.name} dates={zodiac.dates} />)
+      {props.zodiacs.map((zodiac, i) =>
+       
+        <ZodiacCard key={zodiac.name + i} 
+          name={zodiac.name} 
+          dates={zodiac.dates} 
+        />)
     
       }
 
